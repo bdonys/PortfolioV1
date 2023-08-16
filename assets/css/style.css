@@ -1,3 +1,36 @@
 * {
     font-family: Helvetica, sans-serif;
 }
+
+/* Let's give this portfolio a minimal look */
+
+body {
+    background-color: black;
+}
+
+/* Since I want background black
+let's make all test elements visible before applying opacity */
+
+/* header will contain my name and navigation
+Use flexbox to adjust items 
+How do I remove the underlined links?? */
+.header {
+    display: flex;
+    background-color: grey;
+    opacity: 1;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .header nav { 
+    
+}*/
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+}
