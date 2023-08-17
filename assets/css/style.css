@@ -1,36 +1,69 @@
 * {
+    box-sizing: border-box;
     font-family: Helvetica, sans-serif;
 }
+
+/* I want the links to have the hover and focus effects
+I also don't want them default blue */
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: lightgray;
+    transition-delay: color 0.5s ease;
+}
+
 
 /* Let's give this portfolio a minimal look */
 
 body {
     background-color: black;
+    color: white;
 }
 
 /* Since I want background black
 let's make all test elements visible before applying opacity */
 
 /* header will contain my name and navigation
-Use flexbox to adjust items 
-How do I remove the underlined links?? */
+Use flexbox to adjust items links within the navbar */
+
 .header {
-    display: flex;
     background-color: grey;
-    opacity: 1;
+    display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
-
-/* .header nav { 
-    
-}*/
+.header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 50px;
+    padding: 0;
+    text-align: center;
+}
 
 .header nav ul {
     list-style-type: none;
+    margin: 10px;
 }
 
 .header nav ul li {
+    font-family: Georgia, serif;
     display: inline-block;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(32,32,32,0.5); /* This will create a transparent box behind the section to assist in visibility */
+    margin-top: 150px;
+    margin-left: 50px;
+    padding: 25px;
+    height: 200px;
+    width: 470px;
 }
