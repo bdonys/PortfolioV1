@@ -86,3 +86,26 @@ Use flexbox to adjust items links within the navbar */
     margin-top: 10px;
     color: lightgrey;
 }
+
+/* Let's make a section for my projects */
+.projects-header h2{
+    margin-top: 150px;
+    margin-left: 70px;
+}
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 70px;
+    padding: 25px;
+    background-color: rgba(32,32,32,0.5);
+}
+
+
+
+
+
+
+
+
+/* Add @media screen and (max-width: 768px) after we finish */
