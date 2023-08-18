@@ -121,7 +121,11 @@ Use flexbox to adjust items links within the navbar */
     text-align: center;
 }
 
-
+/* refine the contact me section, we can make this pretty simple with just buttons */
+.contact {
+    display: flex;
+    margin: 300px 0 0 70px;
+}
 
 
 
