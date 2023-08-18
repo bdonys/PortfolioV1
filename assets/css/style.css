@@ -129,7 +129,7 @@ Use flexbox to adjust items links within the navbar */
     margin-top: 20px;
 }
 
-.projects .project .project-image::before {
+.projects .project .project-image::before { /* Needed to use a pseudo element. Pseudo elements won't work on <img> elements apparently */
     content: ""; /* this creates a layer on top of the image by default in order to make the hover transition happen */
     position: absolute;
     top: 0;
