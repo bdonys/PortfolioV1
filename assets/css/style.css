@@ -8,11 +8,10 @@ I also don't want them default blue */
 a {
     text-decoration: none;
     color: lightgrey;
-    transition: color 0.5s ease;
+    transition: color 0.5s ease; /* found this cool transition timing to work out */
 }
 a:hover {
     color: grey;
-    transition-delay: color 0.5s ease;
 }
 
 
@@ -75,7 +74,7 @@ Use flexbox to adjust items links within the navbar */
     color: lightgrey;
 }
 .about-me h3 {
-    color: tan;
+    color: tan; /* Use tan to pop out focus and it's complimentary to the black, white, grey theme */
     font-size: 30px;
     margin: 10px;
     font-family: Georgia, serif; /* I need to find some better fonts */
@@ -89,18 +88,38 @@ Use flexbox to adjust items links within the navbar */
 
 /* Let's make a section for my projects */
 .projects-header h2{
-    margin-top: 150px;
-    margin-left: 70px;
+    margin: 300px 0 0 70px;
 }
 .projects {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 70px;
     padding: 25px;
-    background-color: rgba(32,32,32,0.5);
 }
 
+.projects h3 {
+    color: tan;
+    font-family: Georgia, serif;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.projects img {
+    max-width: 400px;
+    height: 200px; /* the images are different in size so i'm using custom px size to reformat */
+    margin-top: 20px;
+}
+
+
+.project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 70px;
+    padding: ;
+    background-color: rgba(32,32,32,0.5);
+    text-align: center;
+}
 
 
 
