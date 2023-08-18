@@ -19,7 +19,10 @@ a:hover {
 
 body {
     background-color: black;
-    color: lightgrey;
+    background-image: url(../images/placeholder-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Since I want background black
@@ -33,10 +36,10 @@ Use flexbox to adjust items links within the navbar */
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 }
 .header h1 {
     font-size: 40px;
+    color: lightgrey;
     font-weight: bold;
     margin-left: 50px;
     padding: 0;
@@ -88,8 +91,10 @@ Use flexbox to adjust items links within the navbar */
 
 /* Let's make a section for my projects */
 .projects-header h2{
-    margin: 300px 0 0 70px;
+    margin: 300px 0 0 100px;
+    color: lightgrey;
 }
+
 .projects {
     display: flex;
     align-items: center;
@@ -97,34 +102,57 @@ Use flexbox to adjust items links within the navbar */
     padding: 25px;
 }
 
-.projects h3 {
+.projects .project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 70px;
+    background-color: rgba(32,32,32,0.5);
+    text-align: center;
+    position: relative;
+}
+
+.projects .project h3 {
     color: tan;
     font-family: Georgia, serif;
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-.projects img {
+.projects .project p {
+    color: lightgrey;
+}
+
+.projects .project img {
     max-width: 400px;
     height: 200px; /* the images are different in size so i'm using custom px size to reformat */
     margin-top: 20px;
 }
 
-
-.project {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 70px;
-    padding: ;
-    background-color: rgba(32,32,32,0.5);
-    text-align: center;
+.projects .project .project-image::before {
+    content: ""; /* this creates a layer on top of the image by default in order to make the hover transition happen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
+
+.projects .project:hover .project-image::before {
+    opacity: 0;
+}
+
+
+
 
 /* refine the contact me section, we can make this pretty simple with just buttons */
 .contact {
+    color: lightgrey;
     display: flex;
-    margin: 300px 0 0 70px;
+    margin: 300px 0 0 100px;
 }
 
 
