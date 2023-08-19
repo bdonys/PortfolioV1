@@ -3,16 +3,6 @@
     font-family: Helvetica, sans-serif;
 }
 
-/* I want the links to have the hover and focus effects
-I also don't want them default blue */
-a {
-    text-decoration: none;
-    color: lightgrey;
-    transition: color 0.5s ease; /* found this cool transition timing to work out */
-}
-a:hover {
-    color: grey;
-}
 
 
 /* Let's give this portfolio a minimal look */
@@ -57,6 +47,18 @@ Use flexbox to adjust items links within the navbar */
     margin: 15px;
     font-size: 20px;
     font-weight: 700;
+}
+
+
+/* I want the links to have the hover and focus effects
+I also don't want them default blue */
+nav ul li a {
+    text-decoration: none;
+    color: lightgrey;
+    transition: color 0.5s ease; /* found this cool transition timing to work out */
+}
+nav ul li a:hover {
+    color: grey;
 }
 
 .about-me {
@@ -110,6 +112,7 @@ Use flexbox to adjust items links within the navbar */
     background-color: rgba(32,32,32,0.5);
     text-align: center;
     position: relative;
+    min-width: 500px; /* I don't want the background to meet the edges of the images when the size gets too small */
 }
 
 .projects .project h3 {
@@ -136,7 +139,7 @@ Use flexbox to adjust items links within the navbar */
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* This particular rgba to make the 'dark' overlay look before hover */
     opacity: 1;
     transition: opacity 0.5s ease;
 }
@@ -151,11 +154,33 @@ Use flexbox to adjust items links within the navbar */
 /* refine the contact me section, we can make this pretty simple with just buttons */
 .contact {
     color: lightgrey;
-    display: flex;
     margin: 300px 0 0 100px;
 }
 
+.contact .button-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 100px 70px;
+}
 
+.contact .button-container .button {
+    font-family: Georgia, serif;
+    padding: 10px 30px;
+    border: 3px solid tan;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.contact .button-container .button:hover {
+    background-color: tan;
+    color: rgba(32,32,32,0.5)
+}
+
+.contact .button-container a {
+    text-decoration: none;
+    color: tan;
+}
 
 
 
