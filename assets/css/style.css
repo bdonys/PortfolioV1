@@ -92,60 +92,103 @@ nav ul li a:hover {
 }
 
 /* Let's make a section for my projects */
-.projects-header h2{
-    margin-top: 300px;
-    text-align: center;
-    color: lightgrey;
-}
 
 .projects {
     display: flex;
-    justify-content: space-around;
-    padding: 25px;
-}
-
-.projects .project {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 70px;
-    background-color: rgba(32,32,32,0.5);
+    align-items: center;
     text-align: center;
-    position: relative;
-    min-width: 500px; /* I don't want the background to meet the edges of the images when the size gets too small */
 }
 
-.projects .project h3 {
+.projects h3 {
     color: tan;
     font-family: Georgia, serif;
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-.projects .project p {
+.projects-header h2{
+    margin-top: 300px;
+    text-align: center;
     color: lightgrey;
 }
 
-.projects .project img {
-    max-width: 400px;
-    height: 200px; /* the images are different in size so i'm using custom px size to reformat */
-    margin-top: 20px;
+.projects p {
+    color: lightgrey;
 }
 
-.projects .project .project-image::before { /* Needed to use a pseudo element. Pseudo elements won't work on <img> elements apparently */
-    content: ""; /* this creates a layer on top of the image by default in order to make the hover transition happen */
+.large-project {
+    margin: 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(32,32,32,0.5);
+    position: relative;
+    padding: 25px;
+}
+
+.large-project-image img {
+    max-width: 900px;
+    max-height: 500px;
+}
+
+.large-project .large-project-image::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.large-project:hover .large-project-image::before {
+    opacity: 0;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 35px;
+    background-color: rgba(32,32,32,0.5);
+    text-align: center;
+    position: relative;
+    max-width: 440px; /* I don't want the background to meet the edges of the images when the size gets too small */
+} /* THE MAX WIDTH ADJUSTED THE DARK BACKGROUND. ADJUSTED VALUES TO MATCH THE SIDES */
+
+.small-projects {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.small-projects .project img {
+    max-width: 400px;
+    height: 200px; /* the images are different in size so i'm using custom px size to reformat */
+    margin-top: 20px;
+}
+
+.small-projects .project .project-image::before { /* Needed to use a pseudo element. Pseudo elements won't work on <img> elements apparently */
+    content: ""; /* this creates an INVISIBLE [note the ""] layer on top of the image by default in order to make the hover transition happen */
+    position: absolute; /* this is to position the layer over the image */
+    top: 0;
+    left: 0; /* the top and left properties sets this element to be positioned at the exact top left of the image */
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* This particular rgba to make the 'dark' overlay look before hover */
     opacity: 1;
     transition: opacity 0.5s ease;
+    pointer-events: none; /* this took me a long time to figure out - this lets the current overlay to allow elements underneath to be interacted with */
 }
 
-.projects .project:hover .project-image::before {
+.small-projects .project:hover .project-image::before {
     opacity: 0;
 }
 
