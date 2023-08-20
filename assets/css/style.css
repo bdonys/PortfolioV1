@@ -61,6 +61,8 @@ nav ul li a:hover {
     color: grey;
 }
 
+
+/* My about me section */
 .about-me {
     display: flex;
     align-items: center;
@@ -218,3 +220,27 @@ nav ul li a:hover {
 
 
 /* Add @media screen and (max-width: 768px) after we finish */
+@media screen and (max-width:768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me {
+        margin: 50px 10px;
+        padding: 25px;
+        height: auto;
+        width: auto; /* added width and height auto to adjust dark background as the window size changes */
+    }
+    .large-project-image img {
+        max-width: 100%; /* the image will fit the window width while the height adjusts accordingly */
+        height: auto;
+    }
+    .small-projects {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
